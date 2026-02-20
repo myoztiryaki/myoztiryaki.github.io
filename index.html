@@ -96,6 +96,32 @@
             text-decoration: underline;
         }
         
+        .header-with-photo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+        .header-photo {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255,255,255,0.9);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+        }
+        .header-title-block {
+            flex: 1;
+            min-width: 200px;
+        }
+        @media (max-width: 600px) {
+            .header-with-photo { flex-direction: column; text-align: center; }
+            .header-photo { width: 88px; height: 88px; }
+        }
+        
         /* Navigation */
         nav {
             background: var(--bg-light);
@@ -367,13 +393,21 @@
 <body>
     <header>
         <div class="container">
-            <h1>Merve Öztiryaki</h1>
-            <p class="subtitle">Data Engineer & Data Scientist</p>
+            <div class="header-with-photo">
+                <img src="profile.jpg" alt="Merve Öztiryaki" class="header-photo" width="96" height="96"/>
+                <div class="header-title-block">
+                    <h1>Merve Öztiryaki</h1>
+                    <p class="subtitle">Data Engineer & Data Scientist</p>
+                </div>
+            </div>
             <div class="contact-info">
                 <span>📍 İzmir, Türkiye</span>
-                <a href="https://www.linkedin.com/in/merveoztiryaki" target="_blank" style="font-weight: 600;">📧 Contact via LinkedIn</a>
-                <a href="https://github.com/myoztiryaki" target="_blank">GitHub</a>
-                <a href="https://medium.com/@myoztiryaki" target="_blank">Medium</a>
+                <a href="https://www.linkedin.com/in/merveoztiryaki" target="_blank" title="Contact via LinkedIn">LinkedIn</a>
+                <a href="https://github.com/myoztiryaki" target="_blank" title="GitHub profile & projects">GitHub</a>
+                <a href="https://www.kaggle.com/myoztiryaki" target="_blank" title="Kaggle profile & projects">Kaggle</a>
+                <a href="https://www.udemy.com/course/docker-container-course/?referralCode=642812A1BE43ACACB7B9" target="_blank" title="Docker course on Udemy">Udemy</a>
+                <a href="https://bootcamp.veribilimiokulu.com/bootcamp-programlari/n8n-egitimi-n8n-developer-bootcamp/" target="_blank" title="N8N Developer Bootcamp">N8n</a>
+                <a href="https://medium.com/@myoztiryaki" target="_blank" title="Medium">Medium</a>
             </div>
         </div>
     </header>
