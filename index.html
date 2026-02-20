@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Merve Öztiryaki - Data Engineer & Data Scientist | Python | Machine Learning | Big Data | AWS | GCP">
+    <meta name="keywords" content="Data Engineer, Data Scientist, Machine Learning, Python, Big Data, AWS, GCP, MLOps">
+    <meta name="author" content="Merve Öztiryaki">
+    <title>Merve Öztiryaki - Data Engineer & Data Scientist</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Merve Öztiryaki - Data Engineer & Data Scientist">
+    <meta property="og:description" content="Experienced Data Engineer and Data Scientist specializing in Python, Machine Learning, Big Data, and Cloud Technologies">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Merve Öztiryaki - Data Engineer & Data Scientist">
+    <meta property="twitter:description" content="Experienced Data Engineer and Data Scientist specializing in Python, Machine Learning, Big Data, and Cloud Technologies">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-light: #f9fafb;
+            --border: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+        
+        header .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+        
+        header .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95rem;
+        }
+        
+        header .contact-info a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+        
+        header .contact-info a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--bg-light);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 15px 0;
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        /* Sections */
+        section {
+            padding: 60px 0;
+        }
+        
+        section:nth-child(even) {
+            background: var(--bg-light);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--primary);
+            text-align: center;
+        }
+        
+        /* Summary */
+        .summary {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+            color: var(--text-light);
+        }
+        
+        /* Experience & Education Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 5px;
+        }
+        
+        .card-company {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .card-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        
+        .card-description {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .card-description ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .card-description li {
+            margin-bottom: 8px;
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .skill-category {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: var(--bg-light);
+            color: var(--text);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+        
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .project-card h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .project-card .date {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+        
+        .project-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Awards */
+        .award-card {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .award-card h3 {
+            color: #92400e;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .award-card p {
+            color: #78350f;
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s;
+        }
+        
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .card-header {
+                flex-direction: column;
+            }
+            
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            nav {
+                display: none;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Merve Öztiryaki</h1>
+            <p class="subtitle">Data Engineer & Data Scientist</p>
+            <div class="contact-info">
+                <span>📍 İzmir, Türkiye</span>
+                <a href="https://www.linkedin.com/in/merveoztiryaki" target="_blank" style="font-weight: 600;">📧 Contact via LinkedIn</a>
+                <a href="https://github.com/myoztiryaki" target="_blank">GitHub</a>
+                <a href="https://medium.com/@myoztiryaki" target="_blank">Medium</a>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#awards">Awards</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="summary">
+        <div class="container">
+            <h2 class="section-title">Summary</h2>
+            <p class="summary">
+                Experienced Data Scientist and Data Engineer with a passion for staying up to date with emerging technologies. 
+                Adept at leading teams and delivering successful digital marketing campaigns. Proficient in Python with a strong 
+                background in business analysis, digital marketing management, and e-commerce. Offering a unique blend of technical 
+                and creative skills, my aim is to drive business success. Career goal is to become a Machine Learning Engineer, 
+                focusing on full-stack projects.
+            </p>
+            <p class="summary" style="margin-top: 20px;">
+                Full data life cycle expertise: ETL, visualization, customer analytics, personalization, and machine learning. 
+                Proficient in open-source big data technologies like Kubernetes, Docker, and microservices. Skilled in Apache Family 
+                (Airflow, Hadoop, Hive, Kafka, Spark), advanced web scraping, SQL/NoSQL, AWS/GCP, and Linux bash scripting.
+            </p>
+        </div>
+    </section>
+    
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Data Engineer & Instructor</h3>
+                        <p class="card-company">DataLonga</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Türkiye</p>
+                    </div>
+                    <span class="card-date">Mar 2024 – Present</span>
+                </div>
+                <div class="card-description">
+                    <p>As a Data Engineer & Instructor, I design and deliver end-to-end data engineering projects while mentoring professionals 
+                    in bootcamps focused on Data Engineering, MLOps, and Data 101.</p>
+                    <ul style="margin-top: 15px;">
+                        <li><strong>DBT & BigQuery (GCP):</strong> Built scalable data transformation pipelines on GCP using dbt-core, modular SQL models, 
+                        and BigQuery datasets for analytics.</li>
+                        <li><strong>Kafka & Apicurio Registry:</strong> Designed real-time data streaming with Kafka and Apicurio Schema Registry, 
+                        managing schema evolution and PostgreSQL integration via Docker Compose.</li>
+                        <li><strong>Spark, Airflow & Delta Lake:</strong> Developed ETL workflows to process complex JSON data and store it in 
+                        Delta Lakehouse architecture using Airflow orchestration.</li>
+                        <li><strong>CDC with Kafka Connect & Databricks:</strong> Implemented a Change Data Capture pipeline to stream database 
+                        changes from MySQL to Kafka using Kafka Connect, and integrated it with Databricks to monitor and process real-time data updates.</li>
+                        <li><strong>Data Visualization:</strong> Created business dashboards in Power BI, Tableau, and Looker Studio for pipeline 
+                        monitoring and insights.</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>Teaching & Mentoring:</strong> Delivering hands-on instruction on Data Engineering, MLOps 
+                    (including CI/CD, MLflow, FastAPI, Docker/Kubernetes, and LLMOps with RAG, LangChain, and Vector Databases), and Data101 bootcamps, 
+                    providing practical training on Docker, and Visualization (PowerBI, Tableau, Looker Studio). Guiding students through real-world 
+                    project implementations and best practices in modern data architecture.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Data Scientist & Strategy Business Development</h3>
+                        <p class="card-company">Frachtbox</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Switzerland / Turkey</p>
+                    </div>
+                    <span class="card-date">Dec 2019 – Dec 2022</span>
+                </div>
+                <div class="card-description">
+                    <p>Worked as a Data Scientist & Strategy Business Development and Digital Marketing Manager at Frachtbox, a company 
+                    with its head office in Switzerland, for 1 year. After being promoted, took on the role of Turkey Office Manager, 
+                    responsible for managing all workflows, product development, and the team at the Turkey office.</p>
+                    <ul>
+                        <li>Spearheaded a freight price estimation project utilizing machine learning models to forecast shipping costs</li>
+                        <li>Led a team of 6 data analysts and achieved a 78% accuracy rate, reducing cost by $150k annually</li>
+                        <li>Won the Republic of Turkey Ministry of Trade - DigiCamp Digital Transformation Competition award with this project</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Marketing Business Analyst</h3>
+                        <p class="card-company">Gizza</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Istanbul, Turkey</p>
+                    </div>
+                    <span class="card-date">Sep 2018 – Dec 2019</span>
+                </div>
+                <div class="card-description">
+                    <p>Prepared reports through account analysis for Youtuber customers, resulting in an 80% increase in performance. 
+                    Within the scope of this task, Google Analytics, Ads, Data Studio, Search Console, Semrush etc. tools were used.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Product Development Specialist</h3>
+                        <p class="card-company">Dev Productions</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Istanbul, Turkey</p>
+                    </div>
+                    <span class="card-date">Jan 2017 – Jan 2018</span>
+                </div>
+                <div class="card-description">
+                    <p>Responsible for the development of the "Bulcaz.com" application. Bulcaz App was an application that displayed the tradesmen 
+                    closest to the user and enabled them to reach them through the application. The application provides customers with 50% time 
+                    and price advantage.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Business Analyst</h3>
+                        <p class="card-company">Ferrero</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Istanbul, Turkey</p>
+                    </div>
+                    <span class="card-date">Jan 2014 – Jan 2017</span>
+                </div>
+                <div class="card-description">
+                    <p>Worked in the quality department. CRM to provide real-time insights into the product, marketing funnels and business KPIs. 
+                    Italian Chocolate company with products such as Nutella and Kinder.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="teaching">
+        <div class="container">
+            <h2 class="section-title">Teaching & Instruction</h2>
+            
+            <div class="card" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid var(--primary);">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title" style="color: var(--primary);">N8N Developer Bootcamp - Lead Instructor</h3>
+                        <p class="card-company" style="color: var(--primary-dark); font-size: 1.2rem; font-weight: 700;">Veri Bilimi Okulu (VBO) - DataLonga</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Online Bootcamp</p>
+                    </div>
+                    <span class="card-date" style="color: var(--primary-dark); font-weight: 600;">Mar 2026 – Apr 2026</span>
+                </div>
+                <div class="card-description" style="color: var(--text);">
+                    <p style="margin-bottom: 15px; font-weight: 600;">Comprehensive 6-week bootcamp teaching n8n workflow automation platform from fundamentals to advanced implementations.</p>
+                    <p style="margin-bottom: 10px;"><strong>Course Topics:</strong></p>
+                    <ul style="margin-left: 20px; margin-bottom: 15px;">
+                        <li><strong>Automation & Workflow:</strong> n8n platform fundamentals, workflow design, triggers, nodes, and logical structures (If/Else, Merge)</li>
+                        <li><strong>API Integration:</strong> REST API requests (GET, POST, PUT), JSON data parsing, authentication (API Key, Bearer Token)</li>
+                        <li><strong>Data Management:</strong> Database CRUD operations, loops for bulk data processing, PostgreSQL integration</li>
+                        <li><strong>AI & RAG Architecture:</strong> Retrieval-Augmented Generation (RAG), vector databases, AI agents with company documents, chatbot memory</li>
+                        <li><strong>Infrastructure & DevOps:</strong> Docker containerization, localhost setup, Oracle Cloud Free Tier deployment, webhooks, Nginx Proxy Manager with SSL</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>Learning Outcomes:</strong> Students learn to transform manual business processes into intelligent digital workflows, connect independent applications via APIs, build dynamic systems with database management, develop AI agents trained on company data, and deploy projects to production environments with zero cost.</p>
+                    <p style="margin-top: 15px;">
+                        <a href="https://bootcamp.veribilimiokulu.com/bootcamp-programlari/n8n-egitimi-n8n-developer-bootcamp/" target="_blank" 
+                           style="color: var(--primary); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--primary);">
+                            View Bootcamp Details →
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Bachelor's Degree, Management</h3>
+                        <p class="card-company">Istanbul University</p>
+                    </div>
+                    <span class="card-date">2016 – 2024</span>
+                </div>
+                <div class="card-description">
+                    <p>Graduated.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Data Processing and Data Processing Technology/Technician</h3>
+                        <p class="card-company">Harvard University</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Cambridge, Massachusetts, US</p>
+                    </div>
+                    <span class="card-date">2023 – 2024</span>
+                </div>
+                <div class="card-description">
+                    <p>Machine Learning · Data Science · R (Programming Language)</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Associate Degree</h3>
+                        <p class="card-company">Acıbadem University School of Medicine</p>
+                    </div>
+                    <span class="card-date">2011-2013</span>
+                </div>
+                <div class="card-description">
+                    <p>Grade 3.69 - Completed the university with a first degree.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">MLOPS Bootcamp</h3>
+                        <p class="card-company">Veri Bilimi Okulu</p>
+                    </div>
+                    <span class="card-date">Nov 2024 - Jan 2025</span>
+                </div>
+                <div class="card-description">
+                    <p>Gained proficiency in ML development process, deployment patterns and tools, MLFLOW, FASTAPI, model deployment 
+                    with FastAPI, Deployment on EC2, Docker, Kubernetes, ML pipelines, detecting drift, CI/CD, Jenkins, Terraform and Ansible.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Data Scientist & Machine Learning Bootcamp</h3>
+                        <p class="card-company">Miuul</p>
+                    </div>
+                    <span class="card-date">June 2023</span>
+                </div>
+                <div class="card-description">
+                    <p>Comprehensive knowledge and skills in data analysis, machine learning, and big data. Topics covered included 
+                    measurement problems (dynamic pricing, AB testing, sorting), CRM analytics (KPIs, cohort analysis, CLTV, segmentation), 
+                    diverse analysis techniques (RFM analysis, customer churn analysis), recommendation systems, advanced feature engineering, 
+                    house price prediction, credit risk prediction, automation and model deployment (Flask, makefile), NLP (text mining, 
+                    review modeling, word embeddings).</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Data Analyst Bootcamp</h3>
+                        <p class="card-company">Akbank - Global AI Hub</p>
+                    </div>
+                    <span class="card-date">May 2023</span>
+                </div>
+                <div class="card-description">
+                    <p>Solid foundation in data analysis, analytics, customer relationship management (CRM), and data visualization. 
+                    The acquired skills equip for leveraging data to drive informed business decisions.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Advanced Google Ads</h3>
+                        <p class="card-company">LinkedIn</p>
+                    </div>
+                    <span class="card-date">May 2021</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Advertising on Facebook: Advanced</h3>
+                        <p class="card-company">LinkedIn</p>
+                    </div>
+                    <span class="card-date">May 2021</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">B2B Marketing on LinkedIn</h3>
+                        <p class="card-company">LinkedIn</p>
+                    </div>
+                    <span class="card-date">May 2021</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Communicating in the Language of Leadership</h3>
+                        <p class="card-company">LinkedIn</p>
+                    </div>
+                    <span class="card-date">May 2021</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Photoshop-Illustrator-InDesign Powercombo for Design</h3>
+                        <p class="card-company">LinkedIn</p>
+                    </div>
+                    <span class="card-date">May 2021</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">SEO: Keyword Strategy</h3>
+                        <p class="card-company">LinkedIn</p>
+                    </div>
+                    <span class="card-date">May 2021</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Digital and Social Media Marketing Management</h3>
+                        <p class="card-company">İstanbul Teknik Üniversitesi</p>
+                    </div>
+                    <span class="card-date">Nov 2020</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Fundamentals of Digital Marketing</h3>
+                        <p class="card-company">Google</p>
+                    </div>
+                    <span class="card-date">Jan 2020</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Français A1</h3>
+                        <p class="card-company">Türkiye Cumhuriyeti Millî Eğitim Bakanlığı</p>
+                    </div>
+                    <span class="card-date">Jan 2018</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Graphic Design</h3>
+                        <p class="card-company">Türkiye Cumhuriyeti Millî Eğitim Bakanlığı</p>
+                    </div>
+                    <span class="card-date">Oct 2016</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Data Analysis</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">CRM</span>
+                        <span class="skill-tag">Cohort Analysis</span>
+                        <span class="skill-tag">RFM Analysis</span>
+                        <span class="skill-tag">CLTV</span>
+                        <span class="skill-tag">A/B Testing</span>
+                        <span class="skill-tag">Churn Analysis</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Bash Scripting</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Machine Learning & AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Artificial Intelligence</span>
+                        <span class="skill-tag">Feature Engineering</span>
+                        <span class="skill-tag">MLflow</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Big Data</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Apache Spark</span>
+                        <span class="skill-tag">Hadoop</span>
+                        <span class="skill-tag">HDFS</span>
+                        <span class="skill-tag">Hive</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Airflow</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Data Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">DBT</span>
+                        <span class="skill-tag">BigQuery</span>
+                        <span class="skill-tag">Delta Lake</span>
+                        <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">MinIO</span>
+                        <span class="skill-tag">Web Scraping</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Visualization</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PowerBI</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Looker Studio</span>
+                        <span class="skill-tag">Data Visualization</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Other</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Time Management</span>
+                        <span class="skill-tag">Data Manipulation</span>
+                        <span class="skill-tag">Data Science</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 30px;">
+                You can reach the projects from my <a href="https://github.com/myoztiryaki" target="_blank" style="color: var(--primary);">GitHub</a> and <a href="https://www.kaggle.com" target="_blank" style="color: var(--primary);">Kaggle</a> accounts.
+            </p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Data Modeling and Transformation with DBT and BigQuery</h3>
+                    <p class="date">November 2024</p>
+                    <p>Used dbt-core and BigQuery to design a scalable data transformation pipeline. Loaded raw CSV data into BigQuery, 
+                    created datasets and tables, and developed SQL-based transformation models using dbt. The project emphasized modular 
+                    transformations, cloud-based data warehousing, and efficient data organization for analytics.</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Data Flow Management with Apicurio Schema Registry and Kafka</h3>
+                    <p class="date">October 2024</p>
+                    <p>Explored how Apicurio Registry works together with Kafka, how ensured data flow, and how stored this data in 
+                    a database like PostgreSQL. By setting up a Kafka data stream and managing data schemas with Apicurio Schema Registry, 
+                    established a secure and organized structure for large-scale data processing. Configured a database using PostgreSQL, 
+                    completed the environment setup with Docker, and created a customer data streaming scenario.</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Loading Complex JSON Data to Lakehouse with Apache Airflow and Spark</h3>
+                    <p class="date">July 2024</p>
+                    <p>The aim of this project is to process raw data sets and make them easily queryable with SQL language and enable 
+                    data analysts to perform the advanced analyses they need. The main technologies used in the project are MinIO, Apache 
+                    Spark, Delta Lake and Apache Airflow.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; text-align: center;">
+                <h3 style="color: var(--primary); margin-bottom: 20px;">Notable GitHub Repositories</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>MLops_Electricity_Consumption_Prediction_Project</h3>
+                        <p>MLOps project for electricity consumption prediction</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>customer_segmentation_RFM</h3>
+                        <p>Customer segmentation using RFM analysis</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>movie_hybrid_recommendation_system</h3>
+                        <p>Hybrid recommendation system for movies</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>rating_product_in_amazon</h3>
+                        <p>Product rating analysis on Amazon</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>abtesting_facebookbidding</h3>
+                        <p>A/B testing for Facebook bidding strategies</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>veri_manipulasyonu</h3>
+                        <p>Data manipulation course notes (⭐ 1)</p>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; color: var(--text-light);">
+                    View all repositories on <a href="https://github.com/myoztiryaki" target="_blank" style="color: var(--primary); font-weight: 600;">GitHub</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="languages">
+        <div class="container">
+            <h2 class="section-title">Languages</h2>
+            <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="skill-category">
+                    <h3>Turkish</h3>
+                    <p style="color: var(--text-light); margin-top: 10px;">Native or bilingual proficiency</p>
+                </div>
+                <div class="skill-category">
+                    <h3>English</h3>
+                    <p style="color: var(--text-light); margin-top: 10px;">Professional working proficiency</p>
+                </div>
+                <div class="skill-category">
+                    <h3>French</h3>
+                    <p style="color: var(--text-light); margin-top: 10px;">Elementary proficiency</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="awards">
+        <div class="container">
+            <h2 class="section-title">Awards & Competitions</h2>
+            <div class="award-card" style="margin-bottom: 25px;">
+                <h3>🏆 DigiCamp Digital Transformation Competition</h3>
+                <p><strong>Republic of Türkiye Ministry of Trade - Google, Facebook, Trendyol and Turkcell</strong></p>
+                <p style="margin-top: 10px; margin-bottom: 10px;">November 2021</p>
+                <p>As a Frachtbox team, received the second prize in the competition. We developed a freight forecasting model with my data 
+                science team. The DigiCamp Digital Transformation Contest winners were determined by a jury of representatives from the private 
+                sector and NGOs. The contest focused on "New Generation Technologies for Solving Problems Requiring Technology in Public Service."</p>
+            </div>
+            <div class="award-card" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                <h3 style="color: #1e40af;">🏅 Pathology</h3>
+                <p style="color: #1e3a8a;"><strong>Acıbadem Üniversitesi</strong></p>
+                <p style="margin-top: 10px; color: #1e3a8a;">June 2013</p>
+                <p style="color: #1e3a8a;">Certificate of completing the university with a first degree.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="volunteer">
+        <div class="container">
+            <h2 class="section-title">Volunteer Work</h2>
+            <div class="card">
+                <h3 class="card-title">AHBAP / AFAD / KIZILAY</h3>
+                <div class="card-description">
+                    <p>Had disaster search and rescue, first aid and leadership certificates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/merveoztiryaki" target="_blank">LinkedIn</a>
+                <a href="https://github.com/myoztiryaki" target="_blank">GitHub</a>
+                <a href="https://medium.com/@myoztiryaki" target="_blank">Medium</a>
+            </div>
+            <p style="opacity: 0.8;">© 2026 Merve Öztiryaki. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
