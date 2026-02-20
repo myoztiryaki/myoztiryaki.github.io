@@ -102,7 +102,7 @@
             justify-content: center;
             gap: 24px;
             flex-wrap: wrap;
-            text-align: left;
+            text-align: center;
         }
         .header-photo {
             width: 96px;
@@ -114,11 +114,16 @@
             flex-shrink: 0;
         }
         .header-title-block {
-            flex: 1;
+            flex: 0 1 auto;
             min-width: 200px;
+            text-align: center;
+        }
+        .header-title-block h1,
+        .header-title-block .subtitle {
+            text-align: center;
         }
         @media (max-width: 600px) {
-            .header-with-photo { flex-direction: column; text-align: center; }
+            .header-with-photo { flex-direction: column; }
             .header-photo { width: 88px; height: 88px; }
         }
         
