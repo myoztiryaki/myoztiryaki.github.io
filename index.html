@@ -183,6 +183,87 @@
             text-align: center;
             color: var(--text-light);
         }
+
+        /* Summary n8n Section Stilleri */
+        .n8n-approved-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            background: #ffffff;
+            border: 2px solid #ff6d5a;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 0 auto 40px auto;
+            max-width: 950px;
+            box-shadow: var(--shadow);
+        }
+
+        .n8n-badge-container {
+            flex-shrink: 0;
+            width: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .n8n-badge-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .n8n-content {
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .n8n-content h3 {
+            color: #1f2937;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .n8n-content p {
+            color: var(--text-light);
+            font-size: 0.98rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .n8n-highlights-title {
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 8px;
+            display: block;
+            font-size: 1rem;
+        }
+
+        .n8n-content ul {
+            margin-left: 20px;
+            color: var(--text-light);
+            font-size: 0.93rem;
+            line-height: 1.6;
+        }
+
+        .n8n-content li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .n8n-approved-box {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            .n8n-badge-container {
+                width: 140px;
+            }
+            .n8n-content {
+                text-align: left;
+            }
+        }
         
         /* Experience & Education Cards */
         .card {
@@ -411,7 +492,7 @@
                 <a href="https://github.com/myoztiryaki" target="_blank" title="GitHub profile & projects">GitHub</a>
                 <a href="https://www.kaggle.com/myoztiryaki" target="_blank" title="Kaggle profile & projects">Kaggle</a>
                 <a href="https://www.udemy.com/course/docker-container-course/?referralCode=642812A1BE43ACACB7B9" target="_blank" title="Docker course on Udemy">Docker</a>
-                <a href="https://bootcamp.veribilimiokulu.com/bootcamp-programlari/n8n-egitimi-n8n-developer-bootcamp/" target="_blank" title="N8N Developer Bootcamp">N8n</a>
+                <a href="https://veribilimiokulu.com.tr/products/n8n-developer-bootcamp" target="_blank" title="n8n AI Agent Developer Bootcamp">N8n</a>
                 <a href="https://medium.com/@myoztiryaki" target="_blank" title="Medium">Medium</a>
             </div>
         </div>
@@ -436,6 +517,27 @@
     <section id="summary">
         <div class="container">
             <h2 class="section-title">Summary</h2>
+            
+            <!-- n8n Onaylı Müfredat Alanı -->
+            <div class="n8n-approved-box">
+                <div class="n8n-badge-container">
+                    <img src="n8n-badge.png" alt="n8n Approved Curriculum - Official Education Partner" class="n8n-badge-img">
+                </div>
+                <div class="n8n-content">
+                    <h3>Türkiye'de n8n Onaylı İlk Eğitim Müfredatı - n8n Education Partner</h3>
+                    <p>n8n’in resmi ekibi tarafından onaylanan n8n AI Agent Developer Bootcamp geliştiricisi ve eğitmeniyim. n8n eğitimi ve n8n kursu arayanlar için hazırladığım onaylı müfredat ile n8n öğrenmek isteyen profesyonellere ve kurumlara uçtan uca otomasyon eğitimi sunuyorum.</p>
+                    
+                    <span class="n8n-highlights-title">n8n Eğitimi Müfredatında Öne Çıkanlar:</span>
+                    <ul>
+                        <li><strong>Workflow Otomasyonu & API Entegrasyonları:</strong> REST API, Webhook, JSON veri işleme ve hata yönetimi (Error Handling).</li>
+                        <li><strong>Yapay Zeka & AI Agent Geliştirme:</strong> RAG (Retrieval-Augmented Generation) mimarisi, Vector Database (Vektör Veritabanları), Gemini Embeddings ve hafızalı (Memory) AI Chatbot/Asistan kurguları.</li>
+                        <li><strong>Veritabanı & SQL Entegrasyonu:</strong> PostgreSQL ve AI destekli doğal dil ile veritabanı sorgulama otomasyonları.</li>
+                        <li><strong>Self-Hosted & DevOps:</strong> Docker, Docker Compose, Oracle Cloud (Production) altyapısında n8n kurulumu, Nginx Proxy Manager ile SSL ve alan adı yönlendirmeleri.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mevcut Özet Metinleri -->
             <p class="summary">
                 Experienced AI and Data Engineer with a passion for staying up to date with emerging technologies. 
                 Adept at leading teams and delivering successful digital marketing campaigns. Proficient in Python with a strong 
